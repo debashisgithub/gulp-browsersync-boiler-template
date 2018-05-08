@@ -1,1 +1,1 @@
-# gulp-browsersync-boiler-template
+# Gulp BrowserSync Boiler Template
