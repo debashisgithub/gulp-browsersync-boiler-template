@@ -1,6 +1,6 @@
 # Gulp BrowserSync Boiler Template
 
-Please check following packages are installed into your system 
+Please make sure that, following packages are installed into your system.
 
 1. **Git**
 2. **NodeJs**
