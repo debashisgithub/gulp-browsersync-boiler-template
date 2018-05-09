@@ -1,0 +1,27 @@
+{
+  "name": "gulp-browsersync-boiler-template",
+  "version": "1.0.0",
+  "description": "Gulp builer template with live reload",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debashisgithub/gulp-browsersync-boiler-template.git"
+  },
+  "keywords": [
+    "gulp",
+    "browsersync"
+  ],
+  "author": "DMondal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debashisgithub/gulp-browsersync-boiler-template/issues"
+  },
+  "homepage": "https://github.com/debashisgithub/gulp-browsersync-boiler-template#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1"
+  }
+}
