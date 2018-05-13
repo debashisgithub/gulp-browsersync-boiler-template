@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var path = require('path');
 
+var PORT = process.env.PORT || 5000;
+var UIPORT = 5001;
+
 const dirs = {
     uiPath: path.resolve(__dirname, 'public'),
     nodeModules: path.resolve(__dirname, 'node_modules'),
@@ -12,15 +15,15 @@ gulp.task('watch', () => {
     gulp.watch(dirs.uiPath + '/**/*', browserSync.reload);
 });
 
-gulp.task('default', ['watch'], () => {
+gulp.task('browser-sync', () => {
     /**
     * Gulp browser sync configuration options
     * Link : https://www.browsersync.io/docs/options
     */
     browserSync({
-        port: 5000,
+        port: PORT,
         ui: {
-            port: 5001
+            port: UIPORT
         },
         server: {
             baseDir: dirs.uiPath,
@@ -31,3 +34,5 @@ gulp.task('default', ['watch'], () => {
         }
     });
 });
+
+gulp.task('default', ['browser-sync', 'watch']);
