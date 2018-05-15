@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var path = require('path');
+var modRewrite = require('connect-modrewrite');
 
 var PORT = process.env.PORT || 5000;
 var UIPORT = 5001;
@@ -30,7 +31,15 @@ gulp.task('browser-sync', () => {
             routes: {
                 "/node_modules": dirs.nodeModules,
                 "/bower_components": dirs.bowerComponent
-            }
+            },
+            /**
+             * Implement .htaccess rule here
+             */
+            middleware: [
+                modRewrite([
+                    '!\\.\\w+$ /index.html [L]'
+                ])
+            ],
         }
     });
 });
