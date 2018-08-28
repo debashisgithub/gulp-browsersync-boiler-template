@@ -23,6 +23,7 @@
   "dependencies": {
     "browser-sync": "^2.24.4",
     "connect-modrewrite": "^0.10.2",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
   }
 }
